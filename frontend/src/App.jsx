@@ -1,4 +1,5 @@
 import './App.css'
+import VehicleRegistration from './components/VehicleRegistration'
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
         <p>Sistema de consulta y gestión vehicular</p>
       </header>
       <main>
-        <p>Bienvenido. Selecciona una opción del menú.</p>
+        <VehicleRegistration />
       </main>
     </div>
   )
