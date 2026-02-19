@@ -1,5 +1,6 @@
 import './App.css'
 import VehicleRegistration from './components/VehicleRegistration'
+import CirculationStatus from './components/CirculationStatus'
 
 function App() {
   return (
@@ -9,7 +10,13 @@ function App() {
         <p>Sistema de consulta y gestión vehicular</p>
       </header>
       <main>
-        <VehicleRegistration />
+        <section className="demo-section">
+          <CirculationStatus />
+        </section>
+        <hr />
+        <section className="demo-section">
+          <VehicleRegistration />
+        </section>
       </main>
     </div>
   )
