@@ -1,46 +1,61 @@
 .status-container {
-  max-width: 500px;
+  max-width: 550px;
   margin: 2rem auto;
   padding: 2rem;
   text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  background-color: var(--card-bg);
 }
 
 .status-form .input-group {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   justify-content: center;
   margin-bottom: 20px;
+  flex-wrap: wrap; /* Por si se ve en celulares */
 }
 
 .status-form input, .status-form select {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  border-radius: 6px;
+}
+
+.status-form input:focus, .status-form select:focus {
+  outline: 2px solid var(--primary-color);
+  border-color: transparent;
 }
 
 .status-form button {
-  padding: 0.5rem 1rem;
-  background-color: #28a745;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.status-form button:hover {
+  background-color: var(--primary-hover);
 }
 
 .result-card {
-  margin-top: 20px;
+  margin-top: 24px;
   padding: 1.5rem;
   border-radius: 8px;
   color: white;
+  font-size: 1.1rem;
 }
 
 .result-card.circula {
-  background-color: #28a745; /* Verde */
+  background-color: var(--success-color);
 }
 
 .result-card.no-circula {
-  background-color: #dc3545; /* Rojo */
+  background-color: var(--danger-color);
 }

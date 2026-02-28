@@ -1,30 +1,28 @@
-import './App.css'
-import VehicleRegistration from './components/VehicleRegistration'
-import CirculationStatus from './components/CirculationStatus'
-import Login from './components/Login'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import VehicleRegistration from './components/VehicleRegistration';
+import Login from './components/Login';
+import './App.css';
 
 function App() {
   return (
-    <div className="app-container">
-      <header>
-        <h1>Hoy No Circula - CDMX</h1>
-        <p>Sistema de consulta y gestión vehicular</p>
-      </header>
-      <main>
-        <section className="demo-section">
-          <Login />
-        </section>
-        <hr />
-        <section className="demo-section">
-          <CirculationStatus />
-        </section>
-        <hr />
-        <section className="demo-section">
-          <VehicleRegistration />
-        </section>
-      </main>
-    </div>
-  )
+    <Router>
+      <div className="app-layout" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <Navbar />
+        
+<main className="main-content" style={{ flex: '1', padding: '2rem 0' }}>          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/registro" element={<VehicleRegistration />} />
+            <Route path="/login" element={<Login />} />
+          </Routes>
+        </main>
+
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
