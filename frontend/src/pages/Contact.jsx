@@ -61,7 +61,7 @@ const Contact = () => {
 
         {/* Form */}
         <div className="contact-form">
-          <h3>Formulario de Contacto</h3>
+          <h3>Formulario de Soporte</h3>
 
           {status.message && (
             <div
