@@ -9,6 +9,7 @@ import AdminPanel from './pages/AdminPanel';
 import Profile from './pages/Profile';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfUse from './pages/TermsOfUse';
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/admin" element={<AdminPanel />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<TermsOfUse />} />
+            <Route path="/contacto" element={<Contact />} />
 
 
 
